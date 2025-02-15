@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import App from "./App";
+import ViewItemInfo from "./view/ViewItemInfo";
 
 function Router() {
 
@@ -9,6 +10,7 @@ function Router() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<App />} />
+          <Route path="/items/:name" element={<ViewItemInfo />} />
         </Routes>
       </BrowserRouter>
   )
