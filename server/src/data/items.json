@@ -2,11 +2,11 @@
     "items": [
         {
             "item_id": 1,
-            "name": "Textbook",
-            "description": "Real Analysis textbook. I hated this class.",
-            "pic_path": "/images/book.jpg",
-            "price": 30.00,
-            "location": "Frank Porter Graham Student Union, 209 South Rd, Chapel Hill, NC 27599",
+            "name": "Math Textbook Bundle",
+            "description": "FINALLY GRADUATED!! So I don't need these books anymore (yay!)",
+            "pic_path": "/images/math_books.png",
+            "price": 75.00,
+            "location": "Davie Hall, 201 South Columbia St, Chapel Hill, NC 27599",
             "category": [
                 "academic"
             ],
@@ -15,36 +15,36 @@
         },
         {
             "item_id": 2,
-            "name": "Coffee Maker",
-            "description": "A sleek coffee maker for your kitchen.",
-            "pic_path": "/images/coffee_maker.jpg",
-            "price": 50.00,
-            "location": "Craige Residence Hall, 555 Paul Hardin Dr, Chapel Hill, NC 27514",
+            "name": "Biol 202 Study Guide",
+            "description": "Comprehensive study guide for BIOL 202",
+            "pic_path": "/images/study_guide.png",
+            "price": 0.00,
+            "location": "Digital (email)",
             "category": [
-                "household"
+                "academic"
             ],
             "owner_id": 2,
-            "is_available": false
-        },
-        {
-            "item_id": 3,
-            "name": "UNC Basketball Tickets",
-            "description": "Two tickets for the upcoming game against Duke. Great seats!",
-            "pic_path": "/images/basketball_tickets.jpg",
-            "price": 120.00,
-            "location": "Dean Smith Center, 300 Skipper Bowles Dr, Chapel Hill, NC 27514",
-            "category": [
-                "tickets"
-            ],
-            "owner_id": 3,
             "is_available": true
         },
         {
+            "item_id": 3,
+            "name": "Chemistry Goggles",
+            "description": "Can't believe they made us buy these smh take mine for free",
+            "pic_path": "/images/goggles.png",
+            "price": 0.00,
+            "location": "Kenan Labs, 125 South Rd, Chapel Hill, NC 27514",
+            "category": [
+                "academic"
+            ],
+            "owner_id": 3,
+            "is_available": false
+        },
+        {
             "item_id": 4,
-            "name": "UNC Hoodie",
-            "description": "Size M, barely worn Carolina Blue hoodie with UNC logo",
-            "pic_path": "/images/hoodie.jpg",
-            "price": 25.00,
+            "name": "UNC Zip-Up Hoodie",
+            "description": "Size 12 gray zip-up, cotton",
+            "pic_path": "/images/hoodie.png",
+            "price": 15.00,
             "location": "Morrison Residence Hall, 445 Paul Hardin Dr, Chapel Hill, NC 27514",
             "category": [
                 "clothing"
@@ -54,50 +54,49 @@
         },
         {
             "item_id": 5,
-            "name": "Chemistry Lab Kit",
-            "description": "Complete lab kit for CHEM 101L, includes goggles and lab coat",
-            "pic_path": "/images/lab_kit.jpg",
-            "price": 45.00,
-            "location": "Kenan Labs, 125 South Rd, Chapel Hill, NC 27514",
+            "name": "Desk Lamp",
+            "description": "Very cool desk lamp. Much loved.",
+            "pic_path": "/images/lamp.png",
+            "price": 15.00,
+            "location": "Ehringhaus Residence Hall, 108 Ehringhaus Dr, Chapel Hill, NC 27514, Room 238",
             "category": [
-                "academic"
+                "household"
             ],
             "owner_id": 5,
             "is_available": true
         },
         {
             "item_id": 6,
-            "name": "Mini Fridge",
-            "description": "3.3 cubic feet, perfect for dorm rooms, includes freezer compartment",
-            "pic_path": "/images/mini_fridge.jpg",
-            "price": 80.00,
-            "location": "Hinton James Residence Hall, 515 Hinton James Dr, Chapel Hill, NC 27514",
+            "name": "PHASE 1 Pitt v. UNC Basketball Tickets",
+            "description": "Two tickets for the upcoming game against Pitt. Go heels! Who wants to go w me :D",
+            "pic_path": "/images/basketball_tickets.png",
+            "price": 0.00,
+            "location": "Dean Smith Center, 300 Skipper Bowles Dr, Chapel Hill, NC 27514",
             "category": [
-                "household",
-                "appliances"
+                "tickets"
             ],
             "owner_id": 6,
             "is_available": true
         },
         {
             "item_id": 7,
-            "name": "Calculus Study Guide",
-            "description": "Comprehensive study guide for MATH 231, includes practice problems",
-            "pic_path": "/images/study_guide.jpg",
-            "price": 15.00,
-            "location": "Davis Library, 208 Raleigh St, Chapel Hill, NC 27514",
+            "name": "Coffee Maker",
+            "description": "I love coffee i love it i love it",
+            "pic_path": "/images/coffee_maker.png",
+            "price": 20.00,
+            "location": "Craige Residence Hall, 555 Paul Hardin Dr, Chapel Hill, NC 27514",
             "category": [
-                "academic"
+                "household"
             ],
             "owner_id": 7,
             "is_available": true
         },
         {
             "item_id": 8,
-            "name": "Concert Tickets",
-            "description": "Two tickets for the Spring Jubilee at Memorial Hall",
-            "pic_path": "/images/concert_tickets.jpg",
-            "price": 40.00,
+            "name": "Samaa Concert Tickets",
+            "description": "Two tickets for the Spring Samaa concert at Memorial Hall. I cant go anymore :(",
+            "pic_path": "/images/concert_tickets.png",
+            "price": 0.00,
             "location": "Memorial Hall, 114 E Cameron Ave, Chapel Hill, NC 27514",
             "category": [
                 "tickets"
@@ -107,13 +106,14 @@
         },
         {
             "item_id": 9,
-            "name": "Desk Lamp",
-            "description": "LED desk lamp with adjustable brightness and USB charging port",
-            "pic_path": "/images/desk_lamp.jpg",
-            "price": 20.00,
-            "location": "Ehringhaus Residence Hall, 108 Ehringhaus Dr, Chapel Hill, NC 27514",
+            "name": "Mini Fridge",
+            "description": "3.3 cubic feet, perfect for dorm rooms!!!!",
+            "pic_path": "/images/mini_fridge.png",
+            "price": 80.00,
+            "location": "Hinton James Residence Hall, 515 Hinton James Dr, Chapel Hill, NC 27514, Room #100",
             "category": [
-                "household"
+                "household",
+                "appliances"
             ],
             "owner_id": 9,
             "is_available": true
@@ -121,9 +121,9 @@
         {
             "item_id": 10,
             "name": "Graduation Gown",
-            "description": "Used once, perfect condition, size L graduation gown",
-            "pic_path": "/images/graduation_gown.jpg",
-            "price": 35.00,
+            "description": "Used once. Only for rent--please return after graduation.",
+            "pic_path": "/images/graduation_gown.png",
+            "price": 0.00,
             "location": "Student Stores, 207 South Rd, Chapel Hill, NC 27599",
             "category": [
                 "clothing",
@@ -135,9 +135,9 @@
         {
             "item_id": 11,
             "name": "Bike Lock",
-            "description": "Heavy-duty U-lock with cable, perfect for campus bike security",
-            "pic_path": "/images/bike_lock.jpg",
-            "price": 15.00,
+            "description": "DON'T LET YOUR BIKE GET STOLEN!!! Heavy-duty bike lock, perfect for campus bike security.",
+            "pic_path": "/images/bike_lock.png",
+            "price": 5.00,
             "location": "Rams Head Recreation Center, 175 Ridge Rd, Chapel Hill, NC 27514",
             "category": [
                 "miscellaneous"
@@ -147,11 +147,11 @@
         },
         {
             "item_id": 12,
-            "name": "Psychology Textbook Bundle",
-            "description": "PSYC 101 textbook with study guide and online access code",
-            "pic_path": "/images/psych_books.jpg",
-            "price": 75.00,
-            "location": "Davie Hall, 201 South Columbia St, Chapel Hill, NC 27599",
+            "name": "Textbook",
+            "description": "Real Analysis textbook. This class was hard.",
+            "pic_path": "/images/book.png",
+            "price": 0.00,
+            "location": "Frank Porter Graham Student Union, 209 South Rd, Chapel Hill, NC 27599",
             "category": [
                 "academic"
             ],
@@ -161,10 +161,10 @@
         {
             "item_id": 13,
             "name": "Dorm Room Mirror",
-            "description": "Full-length mirror, perfect for door mounting, includes hanging kit",
-            "pic_path": "/images/mirror.jpg",
-            "price": 25.00,
-            "location": "Koury Residence Hall, 480 Paul Hardin Dr, Chapel Hill, NC 27514",
+            "description": "Full-length mirror, moving out and it won't fit in my car so I'm just giving it away.",
+            "pic_path": "/images/mirror.png",
+            "price": 0.00,
+            "location": "Koury Residence Hall, 480 Paul Hardin Dr, Chapel Hill, NC 27514, Room 118",
             "category": [
                 "household"
             ],
