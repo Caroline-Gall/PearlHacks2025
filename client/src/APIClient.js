@@ -20,6 +20,13 @@ const getItemById = (id) => {
 const addItem = (item) => {
   return HTTPClient.post(`${API_BASE}/items`, item)
 }
+const getPurchasedItems = (id) => {
+  return HTTPClient.get(`${API_BASE}/users/${id}/purchased`);
+};
+
+const generateSavingsReport = (data) => {
+  return HTTPClient.post(`${API_BASE}/savings`, data);
+};
 
 
 export default {
@@ -27,5 +34,7 @@ export default {
   getUserById,
   getItemById,
   getAllItems, 
-  addItem
+  addItem,
+  getPurchasedItems,
+  generateSavingsReport
 };
