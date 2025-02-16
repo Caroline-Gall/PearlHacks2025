@@ -26,6 +26,15 @@
       "last_name": "Jacobson",
       "unc_email_address": "sebine23@unc.edu",
       "avatar": "/images/sebine.png"
+    },
+    {
+      "user_id": 4,
+      "items": [4],
+      "purchased_items": [],
+      "first_name": "Clover",
+      "last_name": "the Pig",
+      "unc_email_address": "clover@unc.edu",
+      "avatar": "/images/clover.png"
     }
   ]
 }

@@ -36,7 +36,7 @@
             "category": [
                 "academic"
             ],
-            "owner_id": 3,
+            "owner_id": 4,
             "is_available": true
         },
         {
@@ -88,7 +88,7 @@
             "category": [
                 "household"
             ],
-            "owner_id": 2,
+            "owner_id": 4,
             "is_available": true
         },
         {
@@ -115,7 +115,7 @@
                 "household",
                 "appliances"
             ],
-            "owner_id": 3,
+            "owner_id": 4,
             "is_available": true
         },
         {
@@ -134,6 +134,19 @@
         },
         {
             "item_id": 11,
+            "name": "Statistics Tutor",
+            "description": "4th year statistics major with experience in data analysis using R and Python. Offering tutoring services for STOR 120, 155, and 320. Pay per hour.",
+            "pic_path": "/images/stats.png",
+            "price": 30.00,
+            "location": "Phillips Hall, E Cameron Ave, Chapel Hill, NC 27514, Undergraduate Lounge",
+            "category": [
+                "services"
+            ],
+            "owner_id": 1,
+            "is_available": true
+        },
+        {
+            "item_id": 12,
             "name": "Bike Lock",
             "description": "DON'T LET YOUR BIKE GET STOLEN!!! Heavy-duty bike lock, perfect for campus bike security.",
             "pic_path": "/images/bike_lock.png",
@@ -142,11 +155,11 @@
             "category": [
                 "miscellaneous"
             ],
-            "owner_id": 1,
+            "owner_id": 3,
             "is_available": true
         },
         {
-            "item_id": 12,
+            "item_id": 13,
             "name": "Textbook",
             "description": "Real Analysis textbook. This class was hard.",
             "pic_path": "/images/book.png",
@@ -159,7 +172,7 @@
             "is_available": true
         },
         {
-            "item_id": 13,
+            "item_id": 14,
             "name": "Dorm Room Mirror",
             "description": "Full-length mirror, moving out and it won't fit in my car so I'm just giving it away.",
             "pic_path": "/images/mirror.png",
@@ -167,6 +180,19 @@
             "location": "Koury Residence Hall, 480 Paul Hardin Dr, Chapel Hill, NC 27514, Room 118",
             "category": [
                 "household"
+            ],
+            "owner_id": 4,
+            "is_available": true
+        },
+        {
+            "item_id": 15,
+            "name": "Mock Interviewing and Resume Review",
+            "description": "Looking for someone to mock interview with me! Specifically in the tech/computer science space. No payment, I will mock interview you back in exchange!",
+            "pic_path": "/images/interview.png",
+            "price": 0.00,
+            "location": "Frank Porter Graham Student Union, 209 South Rd, Chapel Hill, NC 27599",
+            "category": [
+                "services"
             ],
             "owner_id": 2,
             "is_available": true
