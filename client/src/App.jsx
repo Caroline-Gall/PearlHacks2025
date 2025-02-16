@@ -33,7 +33,7 @@ function App() {
       .catch(err => {
         console.error('Error fetching items:', err);
       });
-  }, []);
+  }, [listButtonClicked]);
 
   useEffect(() => {
     api.getAllUsers()
