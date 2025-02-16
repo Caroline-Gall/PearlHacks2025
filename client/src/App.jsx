@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import Header from './components/header';
+import Header from './components/Header';
 import { FaMapMarkerAlt, FaUser, FaCheck, FaTimes } from 'react-icons/fa';
 import api from './APIClient';
 
