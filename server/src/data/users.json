@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "user_id": 1,
+      "items": [1],
+      "purchased_items": [3, 4, 5],
+      "first_name": "Melanie",
+      "last_name": "Gall",
+      "unc_email_address": "mgall2@unc.edu",
+      "avatar": "/images/melanie.png"
+    },
+    {
+      "user_id": 2,
+      "items": [2, 5, 10, 15],
+      "purchased_items": [10, 7],
+      "first_name": "Caroline",
+      "last_name": "Gall",
+      "unc_email_address": "cggall3@unc.edu",
+      "avatar": "/images/caroline.png"
+    },
+    {
+      "user_id": 3,
+      "items": [3],
+      "purchased_items": [8, 9],
+      "first_name": "Sebine",
+      "last_name": "Jacobson",
+      "unc_email_address": "sebine23@unc.edu",
+      "avatar": "/images/sebine.png"
+    },
+    {
+      "user_id": 4,
+      "items": [4],
+      "purchased_items": [],
+      "first_name": "Clover",
+      "last_name": "the Pig",
+      "unc_email_address": "clover@unc.edu",
+      "avatar": "/images/clover.png"
+    }
+  ]
+}
+

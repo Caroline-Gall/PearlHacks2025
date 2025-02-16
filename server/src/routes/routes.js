@@ -1,7 +1,12 @@
 const router = require('express').Router();
 
-const APIProducts = require('./APIproducts');
+const APIitems = require('./APIitems');
+const APIusers = require('./APIusers');
+const APIGPT = require('./APIGPT');
 
-router.use('/products', APIProducts);
+router.use('/items', APIitems);
+router.use('/users', APIusers);
+router.use('/savings', APIGPT);
+
 
 module.exports = router;
