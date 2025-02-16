@@ -17,12 +17,12 @@ const createUser = (first_name, last_name, email, file_num, file_type, role_id, 
 };
 
 
-const getAllUsers = () => {
-  return HTTPClient.get(`${API_BASE}/users`);
+const getAllItems = () => {
+  return HTTPClient.get(`${API_BASE}/items`);
 };
 
 
 export default {
   createUser,
-  getAllUsers
+  getAllItems
 };
