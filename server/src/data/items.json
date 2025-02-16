@@ -28,19 +28,6 @@
         },
         {
             "item_id": 3,
-            "name": "UNC Basketball Tickets",
-            "description": "Two tickets for the upcoming game against Duke. Great seats!",
-            "pic_path": "/images/basketball_tickets.jpg",
-            "price": 120.00,
-            "location": "Dean Smith Center, 300 Skipper Bowles Dr, Chapel Hill, NC 27514",
-            "category": [
-                "tickets"
-            ],
-            "owner_id": 3,
-            "is_available": true
-        },
-        {
-            "item_id": 3,
             "name": "Chemistry Goggles",
             "description": "Can't believe they made us buy these smh take mine for free",
             "pic_path": "/images/goggles.png",
@@ -50,7 +37,7 @@
                 "academic"
             ],
             "owner_id": 3,
-            "is_available": false
+            "is_available": true
         },
         {
             "item_id": 4,
@@ -62,8 +49,8 @@
             "category": [
                 "clothing"
             ],
-            "owner_id": 4,
-            "is_available": false
+            "owner_id": 3,
+            "is_available": true
         },
         {
             "item_id": 5,
@@ -75,8 +62,8 @@
             "category": [
                 "household"
             ],
-            "owner_id": 5,
-            "is_available": false
+            "owner_id": 2,
+            "is_available": true
         },
         {
             "item_id": 6,
@@ -88,8 +75,8 @@
             "category": [
                 "tickets"
             ],
-            "owner_id": 6,
-            "is_available": false
+            "owner_id": 1,
+            "is_available": true
         },
         {
             "item_id": 7,
@@ -101,7 +88,7 @@
             "category": [
                 "household"
             ],
-            "owner_id": 7,
+            "owner_id": 2,
             "is_available": true
         },
         {
@@ -114,7 +101,7 @@
             "category": [
                 "tickets"
             ],
-            "owner_id": 8,
+            "owner_id": 3,
             "is_available": true
         },
         {
@@ -128,7 +115,7 @@
                 "household",
                 "appliances"
             ],
-            "owner_id": 9,
+            "owner_id": 3,
             "is_available": true
         },
         {
@@ -142,7 +129,7 @@
                 "clothing",
                 "academic"
             ],
-            "owner_id": 10,
+            "owner_id": 2,
             "is_available": true
         },
         {
@@ -155,7 +142,7 @@
             "category": [
                 "miscellaneous"
             ],
-            "owner_id": 11,
+            "owner_id": 1,
             "is_available": true
         },
         {
@@ -168,7 +155,7 @@
             "category": [
                 "academic"
             ],
-            "owner_id": 12,
+            "owner_id": 1,
             "is_available": true
         },
         {
@@ -181,7 +168,7 @@
             "category": [
                 "household"
             ],
-            "owner_id": 13,
+            "owner_id": 2,
             "is_available": true
         }
     ]

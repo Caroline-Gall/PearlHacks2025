@@ -12,11 +12,12 @@
     {
       "user_id": 2,
       "items": [2],
-      "purchased_items": [6, 7],
+      "purchased_items": [10, 7],
       "first_name": "Caroline",
       "last_name": "Gall",
       "unc_email_address": "cggall3@unc.edu",
       "avatar": "/images/caroline.png"
+    },
     {
       "user_id": 3,
       "items": [3],

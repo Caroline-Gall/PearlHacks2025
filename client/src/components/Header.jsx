@@ -14,7 +14,7 @@ const Header = ({setListButtonClicked}) => {
             <h6 className="text-xs font-normal">Get rid of all your junk!</h6>
           </Link>
 
-        <div className="flex gap-8">
+        <div className="flex items-center gap-8">
           <div className="flex">
             <button
               onClick={() => setListButtonClicked(true)}
@@ -26,16 +26,9 @@ const Header = ({setListButtonClicked}) => {
 
           <Link
             to="/yourSavings"
-            className="text-white hover:text-[#13294B] transition-colors duration-300"
+            className="text-white hover:text-[#13294B] transition-colors duration-300 mr-10"
           >
             Your Savings
-          </Link>
-
-          <Link
-            to="/yourItems"
-            className="text-white hover:text-[#13294B] transition-colors duration-300"
-          >
-            Your Listed Items
           </Link>
         </div>
       </nav>
