@@ -17,7 +17,6 @@ function ViewItemInfo() {
         })
         .then(ownerData => setOwner(ownerData))
         .catch(err => console.error(err));
-        console.log(owner);
 
     }
   }, [item_id]);
@@ -29,7 +28,7 @@ function ViewItemInfo() {
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       <Header heading="View Item Details" />
-      <main className="flex-grow overflow-y-auto p-4 pb-24">
+      <main className="flex-grow overflow-y-auto p-4">
         <div className="p-4 mb-8 max-w-xl mx-auto bg-white rounded-xl shadow-lg border border-gray-200">
           <h2 className="text-xl font-bold mb-4">{item.name}</h2>
           <img className="w-48 h-48 object-cover rounded-lg" src={item.pic_path} alt={item.name} />
@@ -38,7 +37,7 @@ function ViewItemInfo() {
           <p className="mt-2 text-gray-800">Price: ${item.price}</p>
           <p className="mt-2 text-gray-800">Location: {item.location}</p>
           <div className="flex justify-between mt-4">
-            <a href={`mailto:${owner.unc_email_address}`} className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
+            <a href={`mailto:${owner.unc_email_address}`} className="bg-[#4B9CD3] text-white py-2 px-4 rounded-lg hover:bg-gray-500">
               Message Owner
             </a>
           </div>

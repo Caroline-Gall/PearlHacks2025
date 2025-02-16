@@ -10,7 +10,7 @@ const Header = ({setListButtonClicked}) => {
             to="/"
             className="text-white text-2xl font-bold transition-colors duration-300"
           >
-            jUNC
+            <img className="w-12" src='/images/jUNC_blue.jpg' alt="Profile" />
             <h6 className="text-xs font-normal">Get rid of all your junk!</h6>
           </Link>
 
@@ -26,9 +26,16 @@ const Header = ({setListButtonClicked}) => {
 
           <Link
             to="/yourSavings"
-            className="text-white hover:text-[#13294B] transition-colors duration-300 mr-10"
+            className="text-white hover:text-[#13294B] transition-colors duration-300"
           >
             Your Savings
+          </Link>
+
+          <Link
+            to="/yourItems"
+            className="text-white hover:text-[#13294B] transition-colors duration-300 mr-10"
+          >
+            Your Items
           </Link>
         </div>
       </nav>

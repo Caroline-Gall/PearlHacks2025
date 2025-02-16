@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import { FaMapMarkerAlt, FaUser, FaCheck, FaTimes, FaSearch, FaPlus } from 'react-icons/fa';
@@ -13,6 +14,7 @@ import Button from '@mui/material/Button';
 
 function App() {
   const [items, setItems] = useState([]);
+  const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [listButtonClicked, setListButtonClicked] = useState(false);
@@ -21,7 +23,7 @@ function App() {
   const [priceToAdd, setPriceToAdd] = useState("");
   const [locationToAdd, setLocationToAdd] = useState("");
 
-  const categories = ['academic', 'household', 'tickets', 'miscellaneous', 'clothing'];
+  const categories = ['academic', 'household', 'tickets', 'miscellaneous', 'clothing', 'services'];
 
   useEffect(() => {
     api.getAllItems()
@@ -32,6 +34,14 @@ function App() {
         console.error('Error fetching items:', err);
       });
   }, []);
+
+    useEffect(() => {
+      api.getAllUsers()
+        .then(users => {
+          setUsers(users);
+        })
+        .catch(err => console.error(err));
+    }, []);
 
   const filteredItems = items.filter(item => {
     const searchLower = searchTerm.toLowerCase();
@@ -161,7 +171,9 @@ function App() {
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
+          {filteredItems.map((item) => {
+            let user = users.find(user => user.user_id == item.owner_id);
+            return (
             <div key={item.item_id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               {/* Image Section */}
               <div className="h-48 bg-gray-200 relative">
@@ -176,7 +188,7 @@ function App() {
               <div className="p-4 space-y-3">
                 {/* Title and Price */}
                 <div className="flex justify-between items-start">
-                  <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
+                  <Link to={`/items/${item.item_id}`} className="text-lg font-semibold text-gray-800">{item.name}</Link>
                   <span className="text-lg font-bold text-[#4B9CD3]">
                     ${(item.price || 0).toFixed(2)}
                   </span>
@@ -205,8 +217,8 @@ function App() {
                 {/* Owner and Availability */}
                 <div className="flex justify-between items-center pt-2 border-t border-gray-100">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <FaUser className="text-[#4B9CD3]" />
-                    <span>Owner #{item.owner_id}</span>
+                    <img className="w-8 object-cover rounded-full" src={user.avatar} alt="Profile" />
+                    <span>{user.first_name} {user.last_name}</span>
                   </div>
                   <div className="flex items-center gap-1">
                     {item.is_available ? (
@@ -224,7 +236,7 @@ function App() {
                 </div>
               </div>
             </div>
-          ))}
+          )})}
         </div>
       </main>
     </div>

@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import App from "./App";
+import Profile from "./view/Profile"
 import ViewItemInfo from "./view/ViewItemInfo";
 import ViewSavings from "./view/ViewSavings";
 
@@ -11,7 +12,7 @@ function Router() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<App />} />
-          <Route exact path="/yourItems" element={<App />} />
+          <Route exact path="/yourItems" element={<Profile />} />
           <Route exact path="/yourSavings" element={<ViewSavings />} />
           <Route path="/items/:item_id" element={<ViewItemInfo />} />
         </Routes>

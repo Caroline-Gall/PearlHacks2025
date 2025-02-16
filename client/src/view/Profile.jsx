@@ -1,16 +1,14 @@
 import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import api from '../APIClient.js';
 
 function Profile() {
-  const { userId } = useParams();
+  //const { userId } = useParams();
   const [user, setUser] = useState(null);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    api.getUserById(userId)
+    api.getUserById(2)
       .then(userData => {
         setUser(userData);
         return Promise.all(userData.items.map(id => api.getItemById(id)));
@@ -19,24 +17,24 @@ function Profile() {
         setItems(itemList.filter(item => item.is_available));
       })
       .catch(err => console.error(err));
-  }, [userId]);
+  }, []);
 
   if (!user) return <p>Loading...</p>;
 
   return (
     <div className="flex flex-col h-screen bg-gray-100">
-      <Header heading="User Profile" />
+      <Header />
       <main className="flex-grow overflow-y-auto p-4 pb-24">
-        <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg border p-6">
+        <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6">
           <div className="flex items-center space-x-4 mb-6">
-            <img className="w-24 h-24 object-cover rounded-full" src={user.pic_path} alt="Profile" />
+            <img className="w-24 h-24 object-cover rounded-full" src={user.avatar} alt="Profile" />
             <div>
               <h2 className="text-2xl font-bold">{user.first_name} {user.last_name}</h2>
               <p className="text-gray-600">{user.unc_email_address}</p>
             </div>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4">Listed Items</h3>
+          <h3 className="text-xl font-semibold mb-4">Listed Items:</h3>
           {items.length > 0 ? (
             <ul className="space-y-4">
               {items.map(item => (
@@ -51,7 +49,6 @@ function Profile() {
           )}
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
