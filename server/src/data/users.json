@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "user_id": 1,
+      "items": [1],
+      "first_name": "John",
+      "last_name": "Doe",
+      "unc_email_address": "john.doe@unc.edu",
+      "avatar": "/images/john_doe.jpg"
+    },
+    {
+      "user_id": 2,
+      "items": [2],
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "unc_email_address": "jane.smith@unc.edu",
+      "avatar": "/images/jane_smith.jpg"
+    }
+  ]
+}
+

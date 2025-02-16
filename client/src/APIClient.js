@@ -10,7 +10,7 @@ const getAllUsers = () => {
 };
 
 const getUserById = (id) => {
-  return HTTPClient.get(`${API_BASE}/items/${id}`);
+  return HTTPClient.get(`${API_BASE}/users/${id}`);
 };
 
 const getItemById = (id) => {

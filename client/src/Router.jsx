@@ -10,7 +10,7 @@ function Router() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<App />} />
-          <Route path="/items/:name" element={<ViewItemInfo />} />
+          <Route path="/items/:item_id" element={<ViewItemInfo />} />
         </Routes>
       </BrowserRouter>
   )
