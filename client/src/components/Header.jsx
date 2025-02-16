@@ -11,7 +11,7 @@ const Header = ({setListButtonClicked}) => {
             className="text-white text-2xl font-bold transition-colors duration-300"
           >
             <div className="flex flex-col items-center">
-              <img className="w-12" src='/images/jUNC_blue.jpg' alt="Profile" />
+              <img className="w-12 md:w-16" src='/images/jUNC_blue.jpg' alt="Profile" />
               <h6 className="text-xs font-normal">Get rid of all your junk!</h6>
             </div>
           </Link>

@@ -35,21 +35,26 @@ function App() {
       });
   }, []);
 
-    useEffect(() => {
-      api.getAllUsers()
-        .then(users => {
-          setUsers(users);
-        })
-        .catch(err => console.error(err));
-    }, []);
+  useEffect(() => {
+    api.getAllUsers()
+      .then(users => {
+        setUsers(users);
+      })
+      .catch(err => console.error(err));
+  }, []);
 
   const filteredItems = items.filter(item => {
-    const searchLower = searchTerm.toLowerCase();
-    const matchesSearch = item.name.toLowerCase().includes(searchLower)
+    if (users && users.length > 0) {
 
-    const matchesCategory = !selectedCategory || item.category.includes(selectedCategory);
+      const user = users.find(user => user.user_id == item.owner_id);
+      const searchLower = searchTerm.toLowerCase();
+      const fullName = `${user.first_name} ${user.last_name}`
+      const matchesSearch = item.name.toLowerCase().includes(searchLower) || fullName.toLowerCase().includes(searchLower); 
+      const matchesCategory = !selectedCategory || item.category.includes(selectedCategory);
 
-    return matchesSearch && matchesCategory;
+      return matchesSearch && matchesCategory;
+
+    }
   });
 
 
@@ -127,7 +132,7 @@ function App() {
           </DialogActions>
         </Dialog>
 
-        <h3 className="text-xl font-semibold text-gray-800 mb-3">Find an item!</h3>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">Find items listed by fellow UNC Students!</h3>
         {/* Search Bar */}
         <div className="flex flex-wrap mb-4 justify-between">
           <div>
@@ -174,69 +179,70 @@ function App() {
           {users && users.length > 0 && filteredItems.map((item) => {
             const user = users.find(user => user.user_id == item.owner_id);
             return (
-            <div key={item.item_id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              {/* Image Section */}
-              <div className="h-48 bg-gray-200 relative">
-                <img
-                  src={item.pic_path}
-                  alt={item.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Content Section */}
-              <div className="p-4 space-y-3">
-                {/* Title and Price */}
-                <div className="flex justify-between items-start">
-                  <Link to={`/items/${item.item_id}`} className="text-lg font-semibold text-gray-800">{item.name}</Link>
-                  <span className="text-lg font-bold text-[#4B9CD3]">
-                    ${(item.price || 0).toFixed(2)}
-                  </span>
+              <div key={item.item_id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                {/* Image Section */}
+                <div className="h-48 bg-gray-200 relative">
+                  <img
+                    src={item.pic_path}
+                    alt={item.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                {/* Categories */}
-                <div className="flex flex-wrap gap-2">
-                  {item.category?.map((cat, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-[#4B9CD3] bg-opacity-10 text-white rounded-full text-xs"
-                    >
-                      {cat}
+
+                {/* Content Section */}
+                <div className="p-4 space-y-3">
+                  {/* Title and Price */}
+                  <div className="flex justify-between items-start">
+                    <Link to={`/items/${item.item_id}`} className="text-lg font-semibold text-gray-800">{item.name}</Link>
+                    <span className="text-lg font-bold text-[#4B9CD3]">
+                      ${(item.price || 0).toFixed(2)}
                     </span>
-                  )) || null}
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-600 text-sm">{item.description}</p>
-
-                {/* Location */}
-                <div className="flex items-start gap-2 text-sm text-gray-600">
-                  <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-[#4B9CD3]" />
-                  <span>{item.location}</span>
-                </div>
-
-                {/* Owner and Availability */}
-                <div className="flex justify-between items-center pt-2 border-t border-gray-100">
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <img className="w-8 object-cover rounded-full" src={user.avatar} alt="Profile" />
-                    <span>{user.first_name} {user.last_name}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    {item.is_available ? (
-                      <span className="flex items-center text-green-500 text-sm">
-                        <FaCheck className="mr-1" />
-                        Available
+                  {/* Categories */}
+                  <div className="flex flex-wrap gap-2">
+                    {item.category?.map((cat, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-[#4B9CD3] bg-opacity-10 text-white rounded-full text-xs"
+                      >
+                        {cat}
                       </span>
-                    ) : (
-                      <span className="flex items-center text-red-500 text-sm">
-                        <FaTimes className="mr-1" />
-                        Unavailable
-                      </span>
-                    )}
+                    )) || null}
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-600 text-sm">{item.description}</p>
+
+                  {/* Location */}
+                  <div className="flex items-start gap-2 text-sm text-gray-600">
+                    <FaMapMarkerAlt className="mt-1 flex-shrink-0 text-[#4B9CD3]" />
+                    <span>{item.location}</span>
+                  </div>
+
+                  {/* Owner and Availability */}
+                  <div className="flex justify-between items-center pt-2 border-t border-gray-100">
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <img className="w-8 object-cover rounded-full" src={user.avatar} alt="Profile" />
+                      <span>{user.first_name} {user.last_name}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      {item.is_available ? (
+                        <span className="flex items-center text-green-500 text-sm">
+                          <FaCheck className="mr-1" />
+                          Available
+                        </span>
+                      ) : (
+                        <span className="flex items-center text-red-500 text-sm">
+                          <FaTimes className="mr-1" />
+                          Unavailable
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )})}
+            )
+          })}
         </div>
       </main>
     </div>
