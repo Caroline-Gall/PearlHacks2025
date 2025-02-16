@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
       "price": Number(req.body.price),
       "location": req.body.location,
       "category": [ "academic" ],
-      "owner_id": 1,
+      "owner_id": 2,
       "is_available": true
     }
     console.log(newItem)

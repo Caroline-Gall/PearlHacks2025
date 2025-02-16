@@ -11,7 +11,7 @@
     },
     {
       "user_id": 2,
-      "items": [2],
+      "items": [2, 5, 10, 15],
       "purchased_items": [10, 7],
       "first_name": "Caroline",
       "last_name": "Gall",

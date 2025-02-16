@@ -171,8 +171,8 @@ function App() {
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => {
-            let user = users.find(user => user.user_id == item.owner_id);
+          {users && users.length > 0 && filteredItems.map((item) => {
+            const user = users.find(user => user.user_id == item.owner_id);
             return (
             <div key={item.item_id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               {/* Image Section */}

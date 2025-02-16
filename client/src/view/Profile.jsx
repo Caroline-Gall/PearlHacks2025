@@ -24,7 +24,7 @@ function Profile() {
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       <Header />
-      <main className="flex-grow overflow-y-auto p-4 pb-24">
+      <main className="flex-grow overflow-y-auto p-8">
         <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6">
           <div className="flex items-center space-x-4 mb-6">
             <img className="w-24 h-24 object-cover rounded-full" src={user.avatar} alt="Profile" />
