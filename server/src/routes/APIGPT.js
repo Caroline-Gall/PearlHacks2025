@@ -49,8 +49,6 @@ Provide a short summary for the user using the correct prices of the used items 
 
     const generatedText = response.choices[0]?.message?.content?.trim() || "No response generated.";
     console.log(generatedText);
-    const totalSavingsMatch = generatedText.match(/Total Estimated Savings:\s*\$([\d.]+)/);
-    const totalSavings = totalSavingsMatch ? totalSavingsMatch[1] : "0.00";
 
     let idx = generatedText.indexOf("<");
     let trimmedText = generatedText.slice(idx);
@@ -60,7 +58,6 @@ Provide a short summary for the user using the correct prices of the used items 
     console.log("TRIMMED2: ", trimmedText);
     res.json({
       savingsReport: trimmedText,
-      totalSavings,
     });
   } catch (error) {
     console.error('OpenAI API error:', error);
