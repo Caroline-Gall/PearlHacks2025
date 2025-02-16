@@ -21,8 +21,18 @@ const getAllUsers = () => {
   return HTTPClient.get(`${API_BASE}/users`);
 };
 
+const getUserById = (id) => {
+  return HTTPClient.get(`${API_BASE}/items/${id}`);
+};
+
+const getItemById = (id) => {
+  return HTTPClient.get(`${API_BASE}/items/${id}`);
+};
+
 
 export default {
   createUser,
-  getAllUsers
+  getAllUsers,
+  getUserById,
+  getItemById
 };
