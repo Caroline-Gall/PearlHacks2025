@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-const APIProducts = require('./APIproducts');
+const APIitems = require('./APIitems');
 
-router.use('/products', APIProducts);
+router.use('/items', APIitems);
 
 module.exports = router;
