@@ -37,7 +37,7 @@
                 "tickets"
             ],
             "owner_id": 3,
-            "is_available": true
+            "is_available": false
         },
         {
             "item_id": 4,
@@ -50,7 +50,7 @@
                 "clothing"
             ],
             "owner_id": 4,
-            "is_available": true
+            "is_available": false
         },
         {
             "item_id": 5,
@@ -63,7 +63,7 @@
                 "academic"
             ],
             "owner_id": 5,
-            "is_available": true
+            "is_available": false
         },
         {
             "item_id": 6,
@@ -77,7 +77,7 @@
                 "appliances"
             ],
             "owner_id": 6,
-            "is_available": true
+            "is_available": false
         },
         {
             "item_id": 7,

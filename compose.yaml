@@ -16,6 +16,8 @@ services:
       - /app/src/node_modules
     environment:
       - PORT=80
+    env_file:
+      - .env
 
 
   client:

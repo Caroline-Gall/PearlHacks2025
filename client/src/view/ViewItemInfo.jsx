@@ -38,9 +38,6 @@ function ViewItemInfo() {
           <p className="mt-2 text-gray-800">Price: ${item.price}</p>
           <p className="mt-2 text-gray-800">Location: {item.location}</p>
           <div className="flex justify-between mt-4">
-            <button className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">
-              Buy Item
-            </button>
             <a href={`mailto:${owner.unc_email_address}`} className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
               Message Owner
             </a>

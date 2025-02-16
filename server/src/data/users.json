@@ -3,6 +3,7 @@
     {
       "user_id": 1,
       "items": [1],
+      "purchased_items": [3, 4, 5],
       "first_name": "John",
       "last_name": "Doe",
       "unc_email_address": "john.doe@unc.edu",
@@ -11,6 +12,7 @@
     {
       "user_id": 2,
       "items": [2],
+      "purchased_items": [6, 7],
       "first_name": "Jane",
       "last_name": "Smith",
       "unc_email_address": "jane.smith@unc.edu",
