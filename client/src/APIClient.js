@@ -17,10 +17,15 @@ const getItemById = (id) => {
   return HTTPClient.get(`${API_BASE}/items/${id}`);
 };
 
+const addItem = (item) => {
+  return HTTPClient.post(`${API_BASE}/items`, item)
+}
+
 
 export default {
   getAllUsers,
   getUserById,
   getItemById,
-  getAllItems
+  getAllItems, 
+  addItem
 };
